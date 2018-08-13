@@ -1,0 +1,13 @@
+#cli.yml
+version: '3'
+
+services:
+  web002:
+    image: microsoft/iis:latest 
+    ports:
+    - "81:80"
+
+networks:
+  default:
+    external:
+      name: nat
