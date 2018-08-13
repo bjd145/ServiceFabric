@@ -21,7 +21,7 @@ else {
 $ImageStore = $ApplicationName
 $FQDNApplicationName = "fabric:/{0}" -f $ApplicationName
 
-Copy-ServiceFabricApplicationPackage -ApplicationPackagePath $ApplicationPackage -ApplicationPackagePathInImageStore $ImageStore
+Copy-ServiceFabricApplicationPackage -ApplicationPackagePath $Package -ApplicationPackagePathInImageStore $ImageStore
 Register-ServiceFabricApplicationType -ApplicationPathInImageStore $ImageStore
 Remove-ServiceFabricApplicationPackage -ApplicationPackagePathInImageStore $ImageStore -ImageStoreConnectionString fabric:ImageStore
 
