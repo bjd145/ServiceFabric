@@ -7,6 +7,8 @@ param(
     [switch] $Insecure
 )
 
+Import-Module "$ENV:ProgramFiles\Microsoft SDKs\Service Fabric\Tools\PSModule\ServiceFabricSDK\ServiceFabricSDK.psm1"
+
 if($Insecure) {
     Connect-ServiceFabricCluster -ConnectionEndpoint $SFCluster
 }
