@@ -1,0 +1,38 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+  "parameters": {
+    "clusterName": {
+      "value": ""
+    },
+    "domainName" : {
+      "value" : ""
+    },
+    "adminUserName": {
+      "value": ""
+    },
+    "adminPassword": {
+      "reference": {
+          "keyVault": {
+              "id": ""
+          },
+          "secretName": "managerPassword"
+      }
+    },
+    "sourceVaultResourceId": {
+      "value":  ""
+    },
+    "clusterCertificateUrl": {
+      "value": ""
+    },
+    "clusterCertificateThumbprint": {
+      "value": ""
+    },
+    "adminCertificateUrl": {
+      "value": ""
+    },
+    "adminCertificateThumbprint": {
+      "value": ""
+    }
+  }
+}
